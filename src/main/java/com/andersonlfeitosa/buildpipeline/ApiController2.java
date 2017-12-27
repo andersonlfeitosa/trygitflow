@@ -11,14 +11,14 @@ import org.springframework.web.bind.annotation.RestController;
  * @version 1.0.0
  */
 @RestController
-public class ApiController {
+public class ApiController2 {
 
   /**
    * Expõe método HTTP GET para exibição de mensagem.
    *  
    * @return A mensagem.
    */
-  @RequestMapping("/api1")
+  @RequestMapping("/api2")
   public String sayHello() {
     return ("Hello World, this is a SpringBoot Microservice");
   }
