@@ -18,7 +18,7 @@ public class FB1 {
    *  
    * @return A mensagem.
    */
-  @RequestMapping("/api6")
+  @RequestMapping("/fb1")
   public String sayHello() {
     return ("Hello World, this is a SpringBoot Microservice");
   }
