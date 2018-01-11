@@ -1,7 +1,6 @@
 node {
    
    env.PATH = "${tool 'M3'}/bin:${env.PATH}"
-   String mvn = "mvn -s $JENKINS_HOME/settings.xml"
    
    // adds job parameters within jenkinsfile
    properties([
@@ -25,20 +24,20 @@ node {
    ])
    
    stage('Checkout') {
-      git 'https://github.com/andersonlfeitosa/poc-jenkins-buildpipeline.git'
+      git 'https://github.com/andersonlfeitosa/trygitflow.git'
    }
    stage('Clean') {
-       sh "${mvn} clean"
+       sh "mvn clean"
    }
    stage('Build') {
-       sh "${mvn} install -DskipTests"
+       sh "mvn install -DskipTests"
    }
    stage('Unit Tests') {
-       sh "${mvn} test"
+       sh "mvn test"
    }
    stage('Sonar') {
         withSonarQubeEnv('Sonar') {
-            sh "${mvn} clean install sonar:sonar"
+            sh "mvn clean install sonar:sonar"
         }
    }
    stage('Quality Gate') {
@@ -50,11 +49,10 @@ node {
         }
    }
    stage('Archive') {
-      sh "${mvn} deploy -DskipTest"
+      sh "mvn deploy -DskipTest"
    }
    stage('Docker') {
-      sh "ls -la"
-      //sh "mvn package docker:build docker:push"
+      sh "mvn package docker:build docker:push"
    }
 
 
