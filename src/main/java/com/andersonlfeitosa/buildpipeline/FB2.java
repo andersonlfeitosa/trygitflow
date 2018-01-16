@@ -20,7 +20,7 @@ public class FB2 {
    */
   @RequestMapping("/fb2")
   public String sayHello() {
-    return ("Hello World, this is a SpringBoot Microservice");
+    return ("Ok Novo Return");
   }
 
 }
