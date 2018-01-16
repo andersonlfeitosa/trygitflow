@@ -10,13 +10,13 @@
 
   <groupId>com.andersonlfeitosa</groupId>
   <artifactId>trygitflow</artifactId>
-  <version>1.0.0</version>
+  <version>1.1.0-SNAPSHOT</version>
 
   <scm>
     <connection>scm:git:https://github.com/andersonlfeitosa/trygitflow.git</connection>
     <developerConnection>scm:git:https://github.com/andersonlfeitosa/trygitflow.git</developerConnection>
     <url>https://github.com/andersonlfeitosa/trygitflow.git</url>
-    <tag>trygitflow-1.0.0</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <properties>
