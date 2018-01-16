@@ -23,4 +23,14 @@ public class FB2 {
     return ("Ok Novo Return");
   }
 
+  /**
+   * Expõe método HTTP GET para exibição de mensagem.
+   *  
+   * @return A mensagem.
+   */
+  @RequestMapping("/funcionalidade2")
+  public String sayHello2() {
+    return ("Hello World, this is a SpringBoot Microservice");
+  }
+  
 }
