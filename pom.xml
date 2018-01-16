@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>1.3.8.RELEASE</version>
+    <version>1.5.9.RELEASE</version>
   </parent>
 
   <groupId>com.andersonlfeitosa</groupId>
@@ -25,6 +25,18 @@
     <java.version.source>1.8</java.version.source>
     <java.version.target>1.8</java.version.target>
     <junit.version>4.12</junit.version>
+    <spring-boot-maven-plugin.version>1.5.9.RELEASE</spring-boot-maven-plugin.version>
+    <maven-resources-plugin.version>3.0.1</maven-resources-plugin.version>
+    <maven-jar-plugin.version>2.6</maven-jar-plugin.version>
+    <maven-surefire-plugin.version>2.19.1</maven-surefire-plugin.version>
+    <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
+    <mapstruct-processor.version>1.2.0.Final</mapstruct-processor.version>
+    <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
+    <maven-failsafe-plugin.version>2.20</maven-failsafe-plugin.version>
+    <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
+    <maven-javadoc-plugin.version>3.0.0</maven-javadoc-plugin.version>
+    <docker-maven-plugin.version>0.16.9</docker-maven-plugin.version>
+    <spring-cloud-dependencies.version>Edgware.RELEASE</spring-cloud-dependencies.version>
   </properties>
 
   <build>
@@ -33,7 +45,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-resources-plugin</artifactId>
-        <version>3.0.1</version>
+        <version>${maven-resources-plugin.version}</version>
         <configuration>
           <encoding>${project.build.sourceEncoding}</encoding>
         </configuration>
@@ -41,7 +53,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
-        <version>2.6</version>
+        <version>${maven-jar-plugin.version}</version>
         <configuration>
           <archive>
             <manifest>
@@ -61,12 +73,12 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>2.19.1</version>
+        <version>${maven-surefire-plugin.version}</version>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.7.0</version>
+        <version>${maven-compiler-plugin.version}</version>
         <configuration>
           <source>${java.version.source}</source>
           <target>${java.version.target}</target>
@@ -74,7 +86,7 @@
             <path>
               <groupId>org.mapstruct</groupId>
               <artifactId>mapstruct-processor</artifactId>
-              <version>1.2.0.Final</version>
+              <version>${mapstruct-processor.version}</version>
             </path>
           </annotationProcessorPaths>
         </configuration>
@@ -82,7 +94,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-source-plugin</artifactId>
-        <version>3.0.1</version>
+        <version>${maven-source-plugin.version}</version>
         <executions>
           <execution>
             <goals>
@@ -94,7 +106,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-failsafe-plugin</artifactId>
-        <version>2.20</version>
+        <version>${maven-failsafe-plugin.version}</version>
         <executions>
           <execution>
             <goals>
@@ -107,7 +119,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-release-plugin</artifactId>
-        <version>2.5.3</version>
+        <version>${maven-release-plugin.version}</version>
         <configuration>
           <autoVersionSubmodules>true</autoVersionSubmodules>
           <localCheckout>true</localCheckout>
@@ -116,12 +128,12 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
-        <version>1.5.8.RELEASE</version>
+        <version>${spring-boot-maven-plugin.version}</version>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
-        <version>3.0.0</version>
+        <version>${maven-javadoc-plugin.version}</version>
         <executions>
           <execution>
             <goals>
@@ -137,7 +149,7 @@
       <plugin>
         <groupId>io.fabric8</groupId>
         <artifactId>docker-maven-plugin</artifactId>
-        <version>0.16.9</version>
+        <version>${docker-maven-plugin.version}</version>
         <configuration>
           <images>
             <image>
@@ -161,7 +173,7 @@
       <dependency>
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-dependencies</artifactId>
-        <version>Brixton.SR6</version>
+        <version>${spring-cloud-dependencies.version}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -189,7 +201,21 @@
       <artifactId>junit</artifactId>
       <version>${junit.version}</version>
       <scope>test</scope>
+      <type>jar</type>
     </dependency>
   </dependencies>
+
+  <distributionManagement>
+    <repository>
+      <id>fakerepository-releases</id>
+      <name>Local file system</name>
+      <url>file:///tmp/repository/releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>fakerepository-snapshots</id>
+      <name>Local file system</name>
+      <url>file:///tmp/repository/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
 
 </project>
