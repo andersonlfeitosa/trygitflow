@@ -11,6 +11,27 @@
   <groupId>com.andersonlfeitosa</groupId>
   <artifactId>trygitflow</artifactId>
   <version>1.2.0-SNAPSHOT</version>
+  
+  <organization>
+    <name>Anderson Lobo Feitosa</name>
+    <url>http://www.andersonlfeitosa.com</url>
+  </organization>
+
+  <developers>
+    <developer>
+      <name>Anderson Lobo Feitosa</name>
+      <email>andersonlf@gmail.com</email>
+      <organization>Anderson Lobo Feitosa</organization>
+      <organizationUrl>http://www.andersonlfeitosa.com</organizationUrl>
+    </developer>
+  </developers>
+  
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+    </license>
+  </licenses>
 
   <scm>
     <connection>scm:git:https://github.com/andersonlfeitosa/trygitflow.git</connection>
@@ -21,7 +42,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <docker.registry>192.168.99.100:5000</docker.registry>
+    <docker.registry>andersonlfeitosa</docker.registry>
     <java.version>1.8</java.version>
     <java.version.source>1.8</java.version.source>
     <java.version.target>1.8</java.version.target>
@@ -200,9 +221,6 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>${junit.version}</version>
-      <scope>test</scope>
-      <type>jar</type>
     </dependency>
   </dependencies>
 
