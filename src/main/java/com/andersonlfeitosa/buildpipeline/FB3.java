@@ -18,7 +18,7 @@ public class FB3 {
    * 
    * @return A mensagem.
    */
-  @RequestMapping("/fb3")
+  @RequestMapping("/fb3.3")
   public String sayHello() {
     return ("Ok Novo Return");
   }
@@ -28,7 +28,7 @@ public class FB3 {
    * 
    * @return A mensagem.
    */
-  @RequestMapping("/funcionalidade2")
+  @RequestMapping("/funcionalidade3.3")
   public String sayHello2() {
     return ("Hello World, this is a SpringBoot Microservice");
   }
