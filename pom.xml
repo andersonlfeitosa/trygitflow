@@ -10,7 +10,7 @@
 
   <groupId>com.andersonlfeitosa</groupId>
   <artifactId>trygitflow</artifactId>
-  <version>1.10.0-SNAPSHOT</version>
+  <version>1.10.0</version>
   
   <organization>
     <name>Anderson Lobo Feitosa</name>
@@ -37,7 +37,7 @@
     <connection>scm:git:https://github.com/andersonlfeitosa/trygitflow.git</connection>
     <developerConnection>scm:git:https://github.com/andersonlfeitosa/trygitflow.git</developerConnection>
     <url>https://github.com/andersonlfeitosa/trygitflow.git</url>
-    <tag>HEAD</tag>
+    <tag>trygitflow-1.10.0</tag>
   </scm>
 
   <properties>
