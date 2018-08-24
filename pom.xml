@@ -10,7 +10,7 @@
 
   <groupId>com.andersonlfeitosa</groupId>
   <artifactId>trygitflow</artifactId>
-  <version>1.3.2</version>
+  <version>1.3.3-SNAPSHOT</version>
   
   <organization>
     <name>Anderson Lobo Feitosa</name>
